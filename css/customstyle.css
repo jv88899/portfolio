@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container {
+    width: 100%;
+}
+.container-max {
+    max-width: 960px;
+    margin: 0 auto;
+}
+.img-responsive {
+    max-width: 100%;
+}
+.circle {
+    border-radius: 100%;
+}
+header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    background-color: rgb(41, 47, 54);
+    background-color: rgba(41, 47, 54, 1);
+    color: #bd632f;
+}
+nav {
+    display: flex;
+}
+#nav-logo a,
+#nav-menu-icon a {
+    font-size: 36px;
+    padding: 0 10px 0 10px;
+    color: #bd632f
+}
+#nav-logo {
+    flex-grow: 3;
+    line-height: 80px;
+}
+#nav-list {
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    transition: 0.8s;
+}
+#close-menu {
+    text-align: right;
+    font-size: 36px;
+    line-height: 80px;
+    margin-right: 13px;
+    color: #fff;
+}
+#nav-menu-icon {
+    flex-grow: 3;
+    line-height: 75px;
+    text-align: right;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav a {
+    text-decoration: none;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: #bd632f;
+    font-size: 36px;
+}
+.first {
+    margin-top: 80px;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient( rgba(41, 47, 54, 1), rgba(41, 47, 54, .9)), url('http://gratisography.com/pictures/301_1.jpg') 25%;
+    background-size: cover;
+}
+.about-tag {
+    padding: 85px 10px 0 10px;
+    font-size: 26px;
+    height: 150px;
+    color: #d8973c;
+}
+.btn-link {
+    border: 3px solid #bd632f;
+    display: inline-block;
+    height: 75px;
+    margin-top: 127.5px;
+    text-decoration: none;
+    color: orange;
+    padding: 10px;
+}
+.btn-link:hover {
+    color: #bd632f;
+    border: 3px solid orange;
+}
+.img {
+    height: 125px;
+    width: 125px;
+    border-radius: 100%;
+    border: 3px solid #fff;
+    display: inline-block;
+    margin-top: -58px;
+}
+.second {
+    text-align: center;
+    padding-top: 100px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 768px) {
+    .active {
+        border-bottom: 3px solid orange;
+    }
+    #nav-menu-icon {
+        display: none;
+    }
+    #close-menu {
+        display: none;
+    }
+    #nav-list {
+        background-color: #000;
+        position: static;
+        overflow: visible;
+        transition: 0.8s;
+        display: flex;
+        line-height: 80px;
+        flex-grow: 9;
+        justify-content: flex-end;
+    }
+    nav li a {
+        color: #bd632f;
+        display: inline;
+        font-size: 18px;
+        font-weight: 800;
+        transition: .5s;
+    }
+    nav li a:hover {
+        color: rgb(18, 18, 18);
+    }
+}
